@@ -1,4 +1,6 @@
 ---
 applications:
 - name: hezard-app
+  memory: 256M
+  instances: 1
   command: npm run deploy
