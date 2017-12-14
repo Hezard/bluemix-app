@@ -1,4 +1,4 @@
 ---
 applications:
-- name: my-app
+- name: hezard-app
   command: npm run deploy
