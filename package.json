@@ -7,7 +7,7 @@
     "start": "concurrently \"npm run api-mock-server\" \"ng serve\"",
     "api-mock-server": "json-server server/api-mock/db.json --watch",
     "build": "ng build",
-    "deploy": "nodemon --watch ./dist ./server/index.js",
+    "deploy": "nodemon ./server/index.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
