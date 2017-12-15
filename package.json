@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "concurrently \"npm run api-mock-server\" \"ng serve\"",
     "api-mock-server": "json-server server/api-mock/db.json --watch",
-    "build": "ng build",
+    "build:dev": "ng build",
+    "build:prod": "ng build --prod",
     "deploy": "nodemon ./server/index.js",
     "test": "ng test",
     "lint": "ng lint",
@@ -51,5 +52,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
+  },
+  "engines": {
+    "node": "~8.9.1",
+    "npm": "~4.0.1"
   }
 }
