@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"npm run api-mock-server\" \"ng serve\"",
-    "api-mock-server": "json-server server/api-mock/db.json --watch",
+    "api-mock-server": "json-server api-mock/db.json --watch",
     "build:dev": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",

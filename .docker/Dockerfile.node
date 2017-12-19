@@ -7,17 +7,18 @@ WORKDIR /home/nodeapp/
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 
-COPY ./server/package.json .
-
-# If you are building your code for production
-RUN npm install --only=production
+COPY ./server ./server
 
 # before switching to non-root user, change ownership of home
 RUN chown -R node:node .
 USER node
 
 # Bundle app source
-COPY ./dist ./dist
-COPY ./server .
+COPY ./client/dist ./client/dist
+
+WORKDIR /home/nodeapp/server/
+
+# If you are building your code for production
+RUN npm install --only=production
 
 CMD [ "npm", "start" ]

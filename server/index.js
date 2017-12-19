@@ -14,10 +14,10 @@ var path = require('path'),
 //     }
 // });
 
-app.use(express.static(path.resolve('./dist')));
+app.use(express.static(path.resolve('../client/dist')));
 
 app.get('/', function(request, response) {
-    response.sendFile(path.resolve('./dist/index.html'));
+    response.sendFile(path.resolve('../client/dist/index.html'));
 });
 
 app.listen(port, function (err) {
