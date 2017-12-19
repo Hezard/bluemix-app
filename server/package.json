@@ -1,0 +1,17 @@
+{
+  "name": "bluemix-app-server",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.12.7"
+  },
+  "engines": {
+    "node": "~8.9.1",
+    "npm": "~4.0.1"
+  }
+}

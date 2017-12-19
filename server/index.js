@@ -1,20 +1,20 @@
 var path = require('path'),
     express = require('express'),
     app = express(),
-    port = process.env.PORT || 3000;
+    port = 3000; // process.env.PORT || 3000
 
-app.enable('trust proxy');
+// app.enable('trust proxy');
 
-app.use(function (req, res, next) {
-    if (req.secure || process.env.BLUEMIX_REGION === undefined) {
-      next();
-    } else {
-      console.log('redirecting to https');
-      res.redirect('https://' + req.headers.host + req.url);
-    }
-});
+// app.use(function (req, res, next) {
+//     if (req.secure || process.env.BLUEMIX_REGION === undefined) {
+//       next();
+//     } else {
+//       console.log('redirecting to https');
+//       res.redirect('https://' + req.headers.host + req.url);
+//     }
+// });
 
-app.use(express.static('./dist'));
+app.use(express.static(path.resolve('./dist')));
 
 app.get('/', function(request, response) {
     response.sendFile(path.resolve('./dist/index.html'));
